@@ -25,8 +25,6 @@ function LoginPage({ setAuthenticated, authenticated }) {
     await Api.post("/sessions", data)
       .then((res) => {
         toast.dismiss();
-        console.log(res.data);
-
         toast.success("Tudo pronto Dev, vamos nessa!");
         localStorage.setItem(
           "@KenzieHub:Token",
